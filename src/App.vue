@@ -1,27 +1,34 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template lang="pug">
+#app
+  top
+  #content
+    #left
+      //- 不能用小 m 因為 menu 為 vue 預設字
+      Menu
+      update
+    #right
+      mar
+      Main
+  Footer
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import top from './components/top.vue'
+import Menu from './components/menu.vue'
+import update from './components/update.vue'
+import mar from './components/marquee.vue'
+import Main from './components/main.vue'
+import Footer from './components/footer.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    top,
+    Menu,
+    update,
+    mar,
+    Main,
+    Footer
   }
 }
 </script>
-
-<style lang="stylus">
-#app
-  font-family Avenir, Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
-</style>
